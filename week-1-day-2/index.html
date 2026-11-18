@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive candidate dashboard for Cynaris ATS">
+    <title>Cynaris ATS - Candidate Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#" class="logo">Cynaris ATS</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#candidates">Candidates</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <a href="#candidates" class="nav-button">View Candidates</a>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <!-- Introduction -->
+        <section class="hero">
+            <p class="eyebrow">CYNARIS RECRUITMENT PORTAL</p>
+            <h1>Candidate Dashboard</h1>
+            <p>Explore candidate profiles and application details.</p>
+        </section>
+
+        <!-- Candidate cards -->
+        <section class="candidates" id="candidates">
+            <h2>Candidate Profiles</h2>
+
+            <div class="card-grid">
+
+                <article class="candidate-card">
+                    <div class="avatar">TU</div>
+                    <h3>Trupti Umesh</h3>
+                    <p class="role">Full Stack Development Intern</p>
+                    <p>Skills: HTML, CSS, JavaScript, React</p>
+                    <span class="status selected">Selected</span>
+                </article>
+
+                <article class="candidate-card">
+                    <div class="avatar">AK</div>
+                    <h3>Arun Kumar</h3>
+                    <p class="role">Frontend Development Intern</p>
+                    <p>Skills: HTML, CSS, JavaScript</p>
+                    <span class="status review">Under Review</span>
+                </article>
+
+                <article class="candidate-card">
+                    <div class="avatar">SP</div>
+                    <h3>Swathi Prasad</h3>
+                    <p class="role">Backend Development Intern</p>
+                    <p>Skills: Python, Java, SQL</p>
+                    <span class="status selected">Selected</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Cynaris ATS</h2>
+            <p>A candidate management dashboard demonstrating responsive CSS layouts.</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Cynaris ATS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
