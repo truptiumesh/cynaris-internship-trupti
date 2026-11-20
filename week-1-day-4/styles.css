@@ -1,0 +1,395 @@
+
+/* =====================================
+   1. Global styles and variables
+===================================== */
+
+:root {
+    font-size: 100%;
+    --navy: #172746;
+    --blue: #203b68;
+    --teal: #70d6c3;
+    --background: #f4f6fb;
+    --text: #202b42;
+    --muted: #69758a;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   2. Navigation
+===================================== */
+
+.navbar {
+    background: var(--navy);
+    color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #dce5f5;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--teal);
+}
+
+.nav-label {
+    background: #294267;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+}
+
+/* =====================================
+   3. Main container and hero
+===================================== */
+
+.container {
+    width: 90%;
+    max-width: 68.75rem;
+    margin: 1.5rem auto;
+}
+
+.hero {
+    background: linear-gradient(120deg, #203b68, #356a85);
+    color: var(--white);
+    border-radius: 1.1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.eyebrow {
+    color: var(--teal);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.09em;
+}
+
+.hero h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin: 0.5rem 0;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #e0e9f3;
+}
+
+.hero-icon {
+    font-size: clamp(2rem, 8vw, 4rem);
+    color: #9be6d8;
+    flex-shrink: 0;
+}
+
+/* =====================================
+   4. Dashboard statistics
+===================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.25rem 0.9rem rgb(23 39 70 / 6%);
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 1.9rem;
+    margin-top: 0.5rem;
+}
+
+/* =====================================
+   5. Candidate section
+===================================== */
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.section-heading h2 {
+    font-size: 1.55rem;
+}
+
+.live-label {
+    color: #16866e;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Search and filter controls */
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.4rem;
+}
+
+.filters input,
+.filters select {
+    width: 100%;
+    min-width: 0;
+    background: var(--white);
+    border: 1px solid #dce2ec;
+    border-radius: 0.55rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.filters input:focus,
+.filters select:focus {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+/* Candidate cards */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.candidate-card {
+    min-width: 0;
+    background: var(--white);
+    border: 1px solid #e5eaf2;
+    border-radius: 0.9rem;
+    padding: 1.2rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    min-width: 0;
+}
+
+.avatar {
+    width: 2.8rem;
+    height: 2.8rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e2f3f0;
+    color: #176c62;
+    font-weight: bold;
+}
+
+.candidate-card h3 {
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+}
+
+.role {
+    color: #778197;
+    font-size: 0.82rem;
+}
+
+.skills {
+    color: #536078;
+    font-size: 0.82rem;
+    margin: 0.9rem 0;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.status-selected {
+    background: #dff5e9;
+    color: #187849;
+}
+
+.status-interview {
+    background: #fff0d8;
+    color: #9a6210;
+}
+
+.status-pending {
+    background: #e9edf5;
+    color: #536078;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 1.8rem;
+    color: #778197;
+}
+
+/* =====================================
+   6. About and footer
+===================================== */
+
+.about {
+    margin: 2.5rem 0;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+.about p {
+    color: var(--muted);
+    margin-top: 0.5rem;
+}
+
+footer {
+    background: var(--navy);
+    color: #dce5f5;
+    text-align: center;
+    padding: 1.3rem 5%;
+    font-size: 0.82rem;
+}
+
+/* =====================================
+   7. Tablet breakpoint: 768px
+===================================== */
+
+@media (min-width: 48rem) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        gap: 1.5rem;
+    }
+
+    .container {
+        margin: 2rem auto;
+    }
+
+    .hero {
+        padding: 2.2rem;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
+    }
+
+    .section-heading {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .filters {
+        flex-direction: row;
+    }
+
+    .filters input {
+        flex: 1;
+    }
+
+    .filters select {
+        width: auto;
+        min-width: 11rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================================
+   8. Desktop breakpoint: 1200px
+===================================== */
+
+@media (min-width: 75rem) {
+    .navbar {
+        padding-inline: max(5%, calc((100% - 75rem) / 2));
+    }
+
+    .container {
+        max-width: 75rem;
+        margin: 2.5rem auto;
+    }
+
+    .hero {
+        padding: 2.8rem;
+    }
+
+    .stats {
+        gap: 1.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.3rem;
+    }
+
+    .candidate-card {
+        padding: 1.4rem;
+    }
+
+    .candidate-card:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.6rem 1.5rem rgb(23 39 70 / 10%);
+    }
+
+    .about {
+        padding: 2rem;
+    }
+}
