@@ -1,1 +1,2 @@
 Learning Git branching and commits.
+Learning rebase and conflict resolution.
