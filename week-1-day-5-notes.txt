@@ -1,2 +1,12 @@
-Learning Git branching and commits.
-Learning rebase and conflict resolution.
+Git Workflow Notes
+
+- Feature branches keep work isolated.
+- Conventional Commits make history readable.
+- Interactive rebase can combine related commits.
+- Merge conflicts are resolved by reviewing both changes.
+- Always review changes before committing and pushing.
+
+Additional notes:
+- Use descriptive branch names.
+- Keep commits small and meaningful.
+- Write clear pull request descriptions.
